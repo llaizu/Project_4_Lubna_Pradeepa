@@ -52,6 +52,64 @@ nav{
     }
 
 
+    /* Table styling */
+    .tablestyle th:hover,
+    .tablestyle td:hover
+    {
+        color: violet;
+    }
+    .tablestyle {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tablestyle thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .tablestyle th,
+    .tablestyle td {
+        padding: 20px 70px;
+    }
+
+    .tablestyle tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .tablestyle tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .stablestyle tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+
+    /* Error page */
+    .error{
+        color: red;
+        font-size: 50px;
+        padding: 10px;
+        text-align: center;
+        padding-top: 130pt;
+        animation:blinking 0.7s infinite;
+            }
+/* Makes error message blink */
+@keyframes blinking{
+    0%{   color: red;   }
+    47%{   color: red; }
+    62%{   color: transparent; }
+    97%{   color:transparent; }
+    100%{  color: red;   }
+    }
+
      /* Footer */
 
      .footer{
@@ -97,3 +155,4 @@ nav{
      width: 50px
    }
    
+  
