@@ -8,6 +8,7 @@ const morgan = require('morgan')
 //Router declarations
 const homeRouter = require('./router/home')
 const usersRouter = require('./router/users')
+const usersRouter = require('./router/schedule')
 
 //app.listen
 const PORT = process.env.PORT || 3000
@@ -26,7 +27,7 @@ app.set('views', './views')
 //Router middleware
 app.use('/', homeRouter)
 app.use('/users', usersRouter)
-
+app.use('/users', scheduleRouter)
  //app.listen
  app.listen(PORT, () => {
     console.log(`App is listening at http://localhost:${PORT}`)
