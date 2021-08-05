@@ -2,10 +2,10 @@ const express = require("express")
 const router = express.Router()
 
 
-router.get('/', (req,res)=>
-{
-    res.send("Welcome")
+router.get("/", (req, res) => {
+	res.render("pages/home", {
+		firstname: req.query.firstname,
+	})
 })
 
-
-module.export = router
+module.exports = router

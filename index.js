@@ -25,7 +25,7 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 //Router middleware
-//app.use('/home', signupRouter)
+app.use('/home', signupRouter)
 app.use('/', signupRouter)
 app.use('/home', homeRouter)
 app.use('/users', usersRouter)
