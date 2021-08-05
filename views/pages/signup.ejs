@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIGN UP</title>
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
@@ -17,28 +17,45 @@
     <div class="row errormsg"><%= message %></div>
   <% } %>   
    <main>
-    <form action="/signup" method="POST">     
-			<div class="row"><h1>Signup </h1></div>
-			<div class="row">            
+	<div class="container">
+    <form action="/signup" method="POST">
+		<div class="row">
+			<div class="col-25">            
 				<label for="firstname">First Name *</label>
-				<input id="firstname" type="text" name="firstname" required />				
+				</div>
+				<div class = "col-75">
+				<input id="firstname" type="text" name="firstname" required placeholder="First Name.." />				
 			</div>
+		</div>
 			<div class="row">
+				<div class="col-25">
 				<label for="lastname">Last Name *</label>
-				<input id="lastname" type="text" name="lastname" required />
+				</div>
+				<div class="col-75">
+				<input id="lastname" type="text" name="lastname" required placeholder= "Last Name" />
+		  </div>
 		  </div>
 		  <div class="row">
+			<div class="col-25">
 				<label for="email">Email *</label>
-				<input id="email" type="email" name="email" required />
+				</div>
+				<div class="col-75">
+				<input id="email" type="email" name="email" required placeholder="Enter your email Id" />
 	  		</div>
+			  </div>
 	  		<div class="row">
+				<div class="col-25">
 				<label for="password">Password *</label>
-				<input id="password" type="password" name="password" required />  
 			</div>
-			<div class="row">                                      
+			<div class="col-75">
+				<input id="password" type="password" name="password" required placeholder="password" />  
+			</div>
+			</div>
+			<div class="row">                                   
 				<button type="submit" class="button">Create Account</button>
 		  </div>
 		</form>
+		</div>
    </main>
 </body>
 <%- include('../partials/footer') %>
