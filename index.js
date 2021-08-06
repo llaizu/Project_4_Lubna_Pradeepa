@@ -9,6 +9,7 @@ const morgan = require('morgan')
 const homeRouter = require('./router/home')
 const usersRouter = require('./router/users')
 const signupRouter = require('./router/signup')
+const loginRouter = require('./router/login')
 
 //app.listen
 const PORT = process.env.PORT || 3001
@@ -25,10 +26,11 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 //Router middleware
-app.use('/home', signupRouter)
+app.use('/signup', signupRouter)
 app.use('/', signupRouter)
 app.use('/home', homeRouter)
 app.use('/users', usersRouter)
+app.use('/login', loginRouter)
 
 
  //app.listen

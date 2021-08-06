@@ -1,14 +1,18 @@
 const express = require("express")
 const router = express.Router()
 
-router.get('/login', (req, res) =>
+//Encryption
+const bcrypt = require("bcryptjs")
+const saltRounds = 5
+
+//Database Setup
+const db = require("../database")
+
+router.get('/', (req,res)=>
 {
-    res.render("pages/login")
-})
-router.post('/login', (req,res) =>
-{
-    console.log("email: " + req.body.email)
-    console.log("password: " +req.body.password)
+    res.render('pages/login', {
+        message : req.query.message,
+    })
 })
 
 module.exports = router
