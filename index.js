@@ -11,6 +11,8 @@ const homeRouter = require('./router/home')
 const usersRouter = require('./router/users')
 const signupRouter = require('./router/signup')
 const loginRouter = require('./router/login')
+const logoutRouter = require('./router/logout')
+
 
 //app.listen
 const PORT = process.env.PORT || 3001
@@ -45,7 +47,7 @@ app.use('/home', homeRouter)
 app.use('/users', usersRouter)
 app.use('/login', loginRouter)
 app.use('/', signupRouter)
-
+app.use('/logout', logoutRouter)
 
  //app.listen
  app.listen(PORT, () => {
