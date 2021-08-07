@@ -2,7 +2,7 @@ const redirectToLogin = (req, res, next) => {
     if(!req.session.user_id)
     {
         console.log("Not logged in, go back to /login")
-        res.clearCookie("mrcoffee_sid")
+        res.clearCookie("coffee_sid")
         res.redirect("/login")
     }
     else{

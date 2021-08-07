@@ -12,6 +12,7 @@ const usersRouter = require('./router/users')
 const signupRouter = require('./router/signup')
 const loginRouter = require('./router/login')
 const logoutRouter = require('./router/logout')
+const addScheduleRouter = require('./router/Addschedule')
 
 
 //app.listen
@@ -48,6 +49,7 @@ app.use('/users', usersRouter)
 app.use('/login', loginRouter)
 app.use('/', signupRouter)
 app.use('/logout', logoutRouter)
+app.use('/Addschedule', addScheduleRouter)
 
  //app.listen
  app.listen(PORT, () => {

@@ -116,7 +116,7 @@ nav{
 input[type=text], select, textarea{
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(17, 101, 126);
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
@@ -166,6 +166,13 @@ input[type=submit] {
     display: table;
     clear: both;
   }
+  /*------------------------------HOME PAGE---------------------------------------------*/
+
+
+
+
+
+
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
