@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-// Destroy the cookie and redirect to login page
+// Destroy the session/ cookie and redirect to login page
 router.get("/", (req, res) => {
 	req.session.destroy(function (err) {
 		if (err) {
