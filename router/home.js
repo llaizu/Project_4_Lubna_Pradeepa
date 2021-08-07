@@ -1,15 +1,35 @@
 const express = require("express")
 const router = express.Router()
+const db = require('../database')
 
 const { redirectToLogin } = require("./middleware")
 
 // router.get("/", redirectToLogin, (req, res) => {
 router.get("/", (req, res) => {
-	res.render("pages/home", {
-		firstname: req.session.firstname,
-	})
-})
+	db.any('SELECT * FROM schedules;')
 
+	.then((schedules) => {
+  
+	  //console.log(schedules)
+	 //res.send(schedules)
+   
+	 //res.send(error)
+	 res.render('pages/home' , {
+	   schedules: schedules
+  
+  })
+  
+	})
+	
+	.catch((error) => {
+	  console.log(error)
+	  res.render('pages/error' , {
+		message:"INVALID INPUT TRY AGAIN"
+	  })
+  
+   })
+  })
+  
 module.exports = router
 
 
