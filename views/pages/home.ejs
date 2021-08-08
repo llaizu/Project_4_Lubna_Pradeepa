@@ -9,20 +9,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
-</head>
-  <%- include('../partials/header') %>
-<body>
-  <H1 align=center>Welcome Mr. Coffee Schedule Site </H1><br><br>
-    <div class="row">
-  <div class=solid>
-  
-    <table class=“tablestyle”>
-      <thead>
+
+      </head>
+      <%- include('../partials/header') %>
+    <body>
+       <main class=solid>
+        <H1 align=center> SCHEDULES </H1><br><br>
+        <table class="tablestyle">
+          <thead>
           <tr>
-              <th>User Name</th>
+              <th>First Name</th>
+              <th>Sur Name</th>
               <th>Day</th>
-              <th>Start_Time</th>
-              <th>End_Time</th>
+              <th>Start Time</th>
+              <th>End Time</th>
           </tr>
       </thead>
       <tbody>
@@ -37,11 +37,8 @@
       </tbody>
 <%  } %>
       </table>
-    </div>
-
+    </main>
   <p><a href="/logout">Logout</a></p>
-
- 
   </body>
   <%- include('../partials/footer') %>
 </html>
