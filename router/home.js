@@ -7,7 +7,7 @@ const { redirectToLogin } = require("./middleware")
 // router.get("/", redirectToLogin, (req, res) => {
 router.get("/", (req, res) => {
 	//db.any('SELECT * FROM schedules;')
-	db.any('select users.firstname,users.surname,schedules.day,schedules.starttime,schedules.endtime from users, schedules where users.id = schedules.user_id and users.id =1;')
+	db.any('select users.firstname,users.surname,schedules.day,schedules.starttime,schedules.endtime from users, schedules where users.id = schedules.user_id;')
 
 	.then((schedules) => {
   
