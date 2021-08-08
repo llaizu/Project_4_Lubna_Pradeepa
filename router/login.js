@@ -1,15 +1,11 @@
 const express = require("express")
 const router = express.Router()
-
 //Encryption
 const bcrypt = require("bcryptjs")
 const saltRounds = 5
-
 //Database Setup
 const db = require("../database")
-
 const { redirectToHome } = require("./middleware")
-
 router.get('/', (req,res)=>
 // router.get('/', redirectToHome, (req,res)=>
 {
@@ -17,12 +13,10 @@ router.get('/', (req,res)=>
         message : req.query.message,
     })
 })
-
 router.post('/', (req,res) =>
 {
     console.log("email: " + req.body.email)
     console.log("password: " + req.body.password)
-
     db.oneOrNone("SELECT * from users where email_address = $1;", [req.body.email])
     .then((result) => {
         //if no result, then returns to login page
@@ -54,5 +48,4 @@ if (!result)
     res.redirect(`/login?message=${err}`)
     })
 })
-
 module.exports = router
