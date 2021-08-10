@@ -16,6 +16,7 @@ router.get("/", (req, res) => {
    
 	 //res.send(error)
 	 res.render('pages/home' , {
+	   firstname: req.session.firstname ,
 	   schedules: schedules
   
   })
@@ -33,7 +34,3 @@ router.get("/", (req, res) => {
   
 module.exports = router
 
-//select users.firstname, users.lastname, schedules.day, schedules.start_at, schedules.end_at 
-//from users, schedules
-//where users.id = schedules.user_id
-//and users.id =1
