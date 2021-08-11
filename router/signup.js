@@ -7,7 +7,7 @@ const db = require("../database")
 
 const { redirectToHome } = require("./middleware")
 
-router.get("/", (req, res) => {
+router.get("/", redirectToHome, (req, res) => {
 	res.render("pages/signup", {
 		message: req.query.message,
 	})

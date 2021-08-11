@@ -14,15 +14,13 @@
 <body>
   <H1 align=center>Mr. Coffee Schedule Site </H1><br><br>
     <main>
-     
         <div class="container">
             <form action="/addschedule" method="post">
               <div class="row">
                 <div class="col-25">
-                  <label for="day">Choose Day</label>
+                  <label for="dayoftheweek">Choose Day</label>
                 </div>
                 <div class="col-75">
-                  <!-- <input type="text" id="dayoftheweek" name="dayoftheweek" placeholder="Day of the Week.."> -->
                   
                   <select name="day" id="day">
                   <option value="" selected="selected">Select Day</option> 
@@ -58,29 +56,28 @@
             </form>
           </div>
     </main>
-    <% if (firstname){%>
-      <h2 align=center><strong>Hi <%= firstname %> Your new Schedule is here </strong></h2><br>
-      <% }%>
-    <table class="tablestyle">
-      <thead>
-      <tr>
-          <th>Day</th>
-          <th>Start Time</th>
-          <th>End Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      <% for(let i=0; i < schedules.length; i++) {%>
+  <% if (firstname){%>
+    <h2 align=center><strong>Hi <%= firstname %> Your new Schedule is here </strong></h2><br>
+    <% }%>
+  <table class="tablestyle">
+    <thead>
+    <tr>
+        <th>Day</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <% for(let i=0; i < schedules.length; i++) {%>
 <th> <%= schedules[i].day %> </th>
 <th>  <%= schedules[i].starttime %> </th>
 <th>   <%= schedules[i].endtime %> </th>
-  </tr>
-  </tbody>
+</tr>
+</tbody>
 <%  } %>
-  </table>
-    <p><a href="/logout">Logout</a></p>
-
+</table>
+    <h3><a href="/logout">Logout</a></h3>
 </body>
 <%- include('../partials/footer') %>
 </html>

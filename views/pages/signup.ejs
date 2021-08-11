@@ -14,7 +14,7 @@
 <body>
   <H1 align=center> PLEASE SIGN UP HERE </H1><br><br>
   <% if (message) { %>
-    <div class="row errormsg"><%= message %></div>
+    <div><%= message %></div>
   <% } %>   
    <main>
 	<div class="container">
@@ -36,11 +36,11 @@
 		  </div>
 		  </div>
 		  <div class="row">
-			<div class="col-25">
+			  <div class="col-25">
 				<label for="email">Email *</label>
 				</div>
 				<div class="col-75">
-				<input id="email" type="email" name="email" required placeholder="Enter your email Id" />
+				<input id="email" type="email" name="email" required placeholder= "Enter your email Id" />
 	  		</div>
 			  </div>
 	  		<div class="row">
@@ -51,12 +51,12 @@
 				<input id="password" type="password" name="password" required placeholder="password" />  
 			</div>
 			</div>
-			<div class="row">                                   
-				<button type="submit" class="button">Create Account</button>
+			<div class="row">                           
+				<input type="submit" class="button" value="Create Account"></input>
 		  </div>
 		</form>
 		</div>
-		<p>Already registered?<a href="/login">Login here!</a></p>
+		<H3>Already registered?<a href="/login">Login here!</a></H3>
    </main>
 </body>
 <%- include('../partials/footer') %>

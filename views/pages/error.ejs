@@ -4,29 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>ERROR</title>
+    <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
 </head>
+<%- include('../partials/header') %>
 <body>
-    <!--header-->
-    <%- include('../partials/header') %>
-     <main>
-         <section> 
-            <div class="Err_title">
-              <h1> ERROR </h1>
-            </section>
-              <section>
-              <div class="Err_Message">
-              <h2><b><%= message %></b></h2>
-            </div>
-            </div>
-          </section>
-
-     </main>
-
-
-    <!--footer-->
-    <%- include('../partials/footer') %>
+    <main class="error">
+        <H1><%=message%></H1>
+    </main>
 </body>
-
+<%- include('../partials/footer') %>
 </html>

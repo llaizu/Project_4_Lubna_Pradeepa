@@ -15,7 +15,7 @@
     <body>
        <main class=solid>
         <% if (firstname){%>
-          <h1 align=center><strong>Hi <%= firstname %> Welcome to our schedule website </strong></h1><br>
+          <h1 align=center><strong>Hi <%= firstname %>, Welcome to our schedule website </strong></h1><br>
           <% }%>
         <table class="tablestyle">
           <thead>
@@ -30,8 +30,8 @@
       <tbody>
           <tr>
   <% for(let i=0; i < schedules.length; i++) {%>
-  <th>  <%= schedules[i].firstname%></th>
-  <th>  <%= schedules[i].surname%></th>
+    <th> <a href= "/users/<%= schedules[i].id%>"> <%= schedules[i].firstname %></a> </th>
+    <th> <a href="/users/<%= schedules[i].id%>"><%= schedules[i].surname %></a> </th>
   <th> <%= schedules[i].day %> </th>
   <th>  <%= schedules[i].starttime %> </th>
   <th>   <%= schedules[i].endtime %> </th>
@@ -40,7 +40,7 @@
 <%  } %>
       </table>
     </main>
-  <p><a href="/logout">Logout</a></p>
+  <H3 align = "centre"><a href="/logout">Logout</a></H3>
   </body>
   <%- include('../partials/footer') %>
 </html>
