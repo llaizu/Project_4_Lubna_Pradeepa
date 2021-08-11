@@ -109,9 +109,25 @@ nav{
     100%{  color: red;   }
     }
 
-    /* Add Schedule Page /* AddUser Form */ 
+    /* Add Schedule Form
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(17, 101, 126);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=password], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(17, 101, 126);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=email], select, textarea{
   width: 100%;
   padding: 12px;
   border: 1px solid rgb(17, 101, 126);
@@ -172,6 +188,24 @@ input[type=submit] {
       margin-top: 0;
     }
   }
+
+   /* Error page */
+   .error{
+    color: red;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    padding-top: 130pt;
+    animation:blinking 0.7s infinite;
+        }
+/* Makes error message blink */
+@keyframes blinking{
+0%{   color: red;   }
+47%{   color: red; }
+62%{   color: transparent; }
+97%{   color:transparent; }
+100%{  color: red;   }
+}
 
      /* Footer */
 

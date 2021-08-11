@@ -6,8 +6,8 @@ const saltRounds = 5
 //Database Setup
 const db = require("../database")
 const { redirectToHome } = require("./middleware")
-router.get('/', (req,res)=>
-// router.get('/', redirectToHome, (req,res)=>
+// router.get('/', (req,res)=>
+router.get('/', redirectToHome, (req,res)=>
 {
     res.render('pages/login', {
         message : req.query.message,

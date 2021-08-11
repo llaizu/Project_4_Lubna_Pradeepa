@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap" rel="stylesheet">
+
+      </head>
+      <%- include('../partials/header') %>
+    <body>
+       <main class=solid>
+        <H1 align=center> USER DETAILS </H1><br><br>
+        <table class="tablestyle">
+          <thead>
+          <tr>
+              <H1><th>First Name</th></H1>
+            <H1><th>Sur Name</th></H1>
+              <th>Day</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+  <% for(let i=0; i < users.length; i++) {%>
+  <th>  <%= users[i].firstname%></th>
+  <th>  <%= users[i].surname%></th>
+  <th> <%= users[i].day %> </th>
+  <th>  <%= users[i].starttime %> </th>
+  <th>   <%= users[i].endtime %> </th>
+      </tr>
+      </tbody>
+<%  } %>
+      </table>
+    </main>
+  <h3><a href="/logout">Logout</a></h3>
+  </body>
+  <%- include('../partials/footer') %>
+</html>

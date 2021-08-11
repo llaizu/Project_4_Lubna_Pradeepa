@@ -29,7 +29,7 @@ app.use(
     session({
         name: "coffee_sid",
         secret: process.env.SESSION_SECRET, //encrypting any secret
-        saveUninitialized: false, /* forces a session that is "ininitialized" toi be saved to the store. */
+        saveUninitialized: false, /* forces a session that is "ininitialized" to be saved to the store. */
         cookie: { maxAge: threehours },
         resave: false /*Forces the session to be saved back to the session store, even if the session was never modified */
     })
