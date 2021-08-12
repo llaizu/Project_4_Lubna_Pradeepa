@@ -9,7 +9,7 @@ Clone repo.
 
 
 Full Package list
-dotenv express express-handlebars express-session  nodemailer nodemon pg-promise uuid
+dotenv express express-handlebars express-session  nodemailer nodemon pg-promise 
 
 npm install 
 Create SQL database
