@@ -1,7 +1,7 @@
 # Project_4_Lubna_Pradeepa
 Create a client-server web app with authentication
 
-Author: lubna Laizu and Pradeepa Panneerselvam 
+Author: Lubna Laizu and Pradeepa Panneerselvam 
 
 
 Installation
